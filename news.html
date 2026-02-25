@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <title>News & Updates - RC ARGONET</title>
+</head>
+
+<body>
+
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/img/rc-agronet-logo-470x390.png" alt="RC ARGONET logo" class="logo__img">
+        <span class="logo__span-argo"><span>RC&nbsp;ARGO</span><span class="logo__span-net">NET</span></span>
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-large-line"></i>
+        </div>
+        <ul class="nav__list">
+          <li><a href="index.html#home" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="index.html#areas" class="nav__link">Areas</a></li>
+          <li><a href="index.html#partners" class="nav__link">Partners</a></li>
+          <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+          <li><a href="#" class="nav__link active-link">News</a></li>
+          <li><a href="index.html#contact" class="nav__link button">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== MAIN ====================-->
+  <main class="main">
+
+    <!--==================== NEWS HERO ====================-->
+    <section class="news-hero">
+      <div class="hero-pattern"></div>
+
+      <div class="news-hero__content container">
+        <div class="hero-pattern"></div>
+
+        <span class="news-hero__label">Latest Updates</span>
+        <h1 class="news-hero__title">News &amp; Insights</h1>
+        <p class="news-hero__desc">
+          Stay informed with the latest news, project updates, policy insights,
+          and events from RC ARGONET and the sustainable development sector.
+        </p>
+        <div class="news-hero__breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="ri-arrow-right-s-line"></i>
+          <span>News &amp; Updates</span>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== CATEGORY FILTERS ====================-->
+    <div class="news-filters">
+      <div class="news-filters__inner container">
+        <span class="news-filter active" data-filter="all">All News</span>
+        <span class="news-filter" data-filter="project-updates">Project Updates</span>
+        <span class="news-filter" data-filter="eu-policy">EU Policy</span>
+        <span class="news-filter" data-filter="agriculture">Agriculture</span>
+        <span class="news-filter" data-filter="capacity-building">Capacity Building</span>
+        <span class="news-filter" data-filter="events">Events &amp; Trainings</span>
+        <span class="news-filter" data-filter="partnerships">Partnerships</span>
+      </div>
+    </div>
+
+    <!--==================== FEATURED ARTICLE ====================-->
+    <section class="news-featured">
+      <div class="container">
+        <a href="#" class="news-featured__card reveal" data-category="eu-policy">
+          <div class="news-featured__image">
+            <img src="assets/img/featured-1.jpeg" alt="EU Green Deal" loading="lazy">
+          </div>
+          <div class="news-featured__body">
+            <div class="news-featured__meta">
+              <span class="news__category news__category--green">EU Policy</span>
+              <span class="news__date"><i class="ri-calendar-line"></i> February 10, 2026</span>
+            </div>
+            <h2 class="news-featured__title">
+              RC ARGONET Supports BiH Municipalities in EU Green Deal Alignment
+            </h2>
+            <p class="news-featured__excerpt">
+              As part of our ongoing commitment to EU integration, RC ARGONET has launched a new
+              advisory programme helping municipalities across Bosnia and Herzegovina align their
+              local development strategies with the EU Green Deal framework. The initiative covers
+              sustainable land use, waste reduction targets, and renewable energy transition pathways,
+              delivering practical tools and capacity-building workshops to local administrations.
+            </p>
+            <div class="news-featured__footer">
+              <div class="news__author">
+                <div class="news__author-avatar">
+                  <img src="assets/img/Branka-Zolak.jpg" alt="Author"
+                    onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'ri-user-line\'></i>'">
+                </div>
+                <div>
+                  <div class="news__author-name">RC ARGONET Team</div>
+                  <div class="news__read-time">8 min read</div>
+                </div>
+              </div>
+              <span class="button__link">Read More <i class="ri-arrow-right-line"></i></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!--==================== NEWS GRID + SIDEBAR ====================-->
+    <section class="news-grid section">
+      <div class="container">
+        <div class="news-layout">
+
+          <!--========== MAIN GRID ==========-->
+          <div>
+            <div class="news-grid__layout" id="news-container">
+              <!-- Card 1 -->
+              <article class="news-card reveal" data-category="eu-policy">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--navy">
+                    <i class="ri-shield-check-line"></i>
+                    <i class="ri-number-1"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--navy">EU Policy</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Feb 14, 2026</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    Gender Equality Plan 2026–2028 Adopted in Line with Horizon Europe
+                  </h3>
+                  <p class="news-card__excerpt">
+                    RC ARGONET has formally adopted its Gender Equality Plan for 2026–2028, fulfilling
+                    Horizon Europe requirements and reinforcing our organisational commitment to inclusion.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">Management Board</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="news-card reveal" data-category="project-updates">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--green">
+                    <i class="ri-leaf-line"></i>
+                    <i class="ri-number-2"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--green">Project Updates</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Jan 28, 2026</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    GlobalG.A.P. Pilot Reaches 50 Farms Across Five Municipalities
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Our latest agricultural standards pilot has successfully certified 50 farms across
+                    five municipalities in RS, marking a significant milestone in rural EU compliance readiness.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">RC ARGONET Team</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="news-card reveal" data-category="eu-policy">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--navy">
+                    <i class="ri-government-line"></i>
+                    <i class="ri-number-3"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--navy">EU Policy</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Jan 20, 2026</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    EUDR Compliance Workshop Draws 120 Participants from the Region
+                  </h3>
+                  <p class="news-card__excerpt">
+                    A two-day workshop on EU Deforestation Regulation (EUDR) compliance attracted producers,
+                    exporters, and policy advisors from Bosnia and Herzegovina, Serbia, and North Macedonia.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">Management Board</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 4 -->
+              <article class="news-card reveal" data-category="agriculture">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--orange">
+                    <i class="ri-apple-line"></i>
+                    <i class="ri-number-4"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--orange">Agriculture</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Jan 14, 2026</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    New Market Research: BiH Apple Exporters Show Strong EU Growth Potential
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Our latest market intelligence report reveals untapped opportunities for BiH apple
+                    producers in Germany and Austria, highlighting pricing advantages and certification gaps.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">Research Unit</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article class="news-card reveal" data-category="capacity-building">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--teal">
+                    <i class="ri-graduation-cap-line"></i>
+                    <i class="ri-number-5"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--teal">Capacity Building</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Jan 8, 2026</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    Youth Agribusiness Programme Graduates First Cohort of 40 Trainees
+                  </h3>
+                  <p class="news-card__excerpt">
+                    The inaugural cohort of our youth-focused agribusiness skills programme has completed
+                    their certification, with 35 of 40 trainees already securing employment or placement.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">Research Unit</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 6 -->
+              <article class="news-card reveal" data-category="events">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--orange">
+                    <i class="ri-calendar-event-line"></i>
+                    <i class="ri-number-6"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--orange">Events</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Dec 20, 2025</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    Digital Agriculture Forum 2025: Key Takeaways and Outcomes
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Over 200 stakeholders attended our annual Digital Agriculture Forum in Banja Luka,
+                    discussing traceability technology, precision farming, and data-driven advisory systems.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">Events Team</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 7 -->
+              <article class="news-card reveal" data-category="partnerships">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--purple">
+                    <i class="ri-shake-hands-line"></i>
+                    <i class="ri-number-7"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--purple">Partnerships</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Dec 12, 2025</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    RC ARGONET Signs MOU with GIZ for Regional Agri-Standards Cooperation
+                  </h3>
+                  <p class="news-card__excerpt">
+                    A new Memorandum of Understanding with GIZ ProLocal establishes a three-year
+                    framework for joint implementation of agricultural standards across the Western Balkans.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">Training Unit</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 8 -->
+              <article class="news-card reveal" data-category="project-updates">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--green">
+                    <i class="ri-tent-line"></i>
+                    <i class="ri-number-8"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--green">Project Updates</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Dec 5, 2025</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    Organic Standards Rollout Reaches 56 Farms Ahead of Schedule
+                  </h3>
+                  <p class="news-card__excerpt">
+                    The USAID FARMA II-funded organic certification programme has exceeded its
+                    target, reaching 56 farms in two cooperatives three months ahead of the planned timeline.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">RC ARGONET Team</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 9 -->
+              <article class="news-card reveal" data-category="capacity-building events">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--teal">
+                    <i class="ri-video-line"></i>
+                    <i class="ri-number-9"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--teal">Training</span>
+                    <span class="news__date"><i class="ri-calendar-line"></i> Nov 18, 2025</span>
+                  </div>
+                  <h3 class="news-card__title">
+                    Grant Writing Masterclass: 85 Participants Complete Online Certification
+                  </h3>
+                  <p class="news-card__excerpt">
+                    Our five-week online grant writing masterclass has certified 85 participants from across the Western
+                    Balkans, representing 12 different organisations.
+                  </p>
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar"><i class="ri-user-line"></i></div>
+                      <span class="news__author-name">Training Unit</span>
+                    </div>
+                    <a href="#" class="news-card__read-more">Read <i class="ri-arrow-right-line"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 10 -->
+              <article class="news-card reveal" data-category="capacity-building events">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--teal">
+                    <i class="ri-presentation-line"></i>
+                    <i class="ri-number-1"></i>
+                    <i class="ri-number-0"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--teal">Capacity Building</span>
+                    <span class="news__date">
+                      <i class="ri-calendar-line"></i> Nov 27, 2019
+                    </span>
+                  </div>
+
+                  <h3 class="news-card__title">
+                    RC ARGONET Participates in Professional Training on Raspberry Market and Production in Bihać
+                  </h3>
+
+                  <p class="news-card__excerpt">
+                    RC ARGONET took part in a professional training on raspberry market trends and production, organised
+                    in Bihać by
+                    the Foreign Trade Chamber of Bosnia and Herzegovina and Switzerland Global Enterprise / SIPPO,
+                    bringing together
+                    institutions, experts, companies, and producers from across the region.
+                  </p>
+
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar">
+                        <i class="ri-user-line"></i>
+                      </div>
+                      <span class="news__author-name">RC ARGONET</span>
+                    </div>
+
+                    <a href="#" class="news-card__read-more">
+                      Read <i class="ri-arrow-right-line"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 11 -->
+              <article class="news-card reveal" data-category="events agriculture">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--teal">
+                    <i class="ri-leaf-line"></i>
+                    <i class="ri-number-1"></i>
+                    <i class="ri-number-1"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--teal">Event</span>
+                    <span class="news__date">
+                      <i class="ri-calendar-line"></i> Sep 21, 2018
+                    </span>
+                  </div>
+
+                  <h3 class="news-card__title">
+                    Announcement: Open Day on Urban Agriculture in Banja Luka
+                  </h3>
+
+                  <p class="news-card__excerpt">
+                    The Faculty of Agriculture of the University of Banja Luka, in cooperation with the agricultural
+                    cooperative
+                    Sunčani brijeg, announces an Open Day dedicated to urban agriculture, aimed at promoting local
+                    products,
+                    sustainable food production, and employment opportunities.
+                  </p>
+
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar">
+                        <i class="ri-user-line"></i>
+                      </div>
+                      <span class="news__author-name">RC ARGONET</span>
+                    </div>
+
+                    <a href="#" class="news-card__read-more">
+                      Read <i class="ri-arrow-right-line"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 12 -->
+              <article class="news-card reveal" data-category="capacity-building governance">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--teal">
+                    <i class="ri-group-line"></i>
+                    <i class="ri-number-1"></i>
+                    <i class="ri-number-2"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--teal">Meeting</span>
+                    <span class="news__date">
+                      <i class="ri-calendar-line"></i> Jun 13, 2018
+                    </span>
+                  </div>
+
+                  <h3 class="news-card__title">
+                    Steering Committee Meeting of the Local Employment Partnership Banja Luka Held
+                  </h3>
+
+                  <p class="news-card__excerpt">
+                    A meeting of the Steering Committee of the Local Employment Partnership Banja Luka was held to
+                    review key
+                    activities and agree on next steps, focusing on production progress, cooperative organisation,
+                    organic
+                    certification, market development, and sustainable employment.
+                  </p>
+
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar">
+                        <i class="ri-user-line"></i>
+                      </div>
+                      <span class="news__author-name">RC ARGONET</span>
+                    </div>
+
+                    <a href="#" class="news-card__read-more">
+                      Read <i class="ri-arrow-right-line"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 13 -->
+              <article class="news-card reveal" data-category="policy advocacy agriculture">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--teal">
+                    <i class="ri-megaphone-line"></i>
+                    <i class="ri-number-1"></i>
+                    <i class="ri-number-3"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--teal">Advocacy</span>
+                    <span class="news__date">
+                      <i class="ri-calendar-line"></i> Aug 1, 2016
+                    </span>
+                  </div>
+
+                  <h3 class="news-card__title">
+                    Invitation to Coordination Meeting of Plum Producers and Exporters from Bosnia and Herzegovina
+                  </h3>
+
+                  <p class="news-card__excerpt">
+                    A coordination meeting has been announced to address EU protective pricing measures affecting plum
+                    and other
+                    fruit exports from Bosnia and Herzegovina, with the aim of initiating procedures to abolish measures
+                    causing
+                    significant economic damage to the agricultural sector.
+                  </p>
+
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar">
+                        <i class="ri-user-line"></i>
+                      </div>
+                      <span class="news__author-name">RC ARGONET</span>
+                    </div>
+
+                    <a href="#" class="news-card__read-more">
+                      Read <i class="ri-arrow-right-line"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 14 -->
+              <article class="news-card reveal" data-category="policy advocacy agriculture">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--teal">
+                    <i class="ri-file-list-3-line"></i>
+                    <i class="ri-number-1"></i>
+                    <i class="ri-number-4"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--teal">Policy</span>
+                    <span class="news__date">
+                      <i class="ri-calendar-line"></i> Aug 4, 2016
+                    </span>
+                  </div>
+
+                  <h3 class="news-card__title">
+                    Conclusions from the Coordination Meeting of Plum and Other Fruit Producers and Exporters in Bosnia
+                    and Herzegovina
+                  </h3>
+
+                  <p class="news-card__excerpt">
+                    Representatives of relevant ministries, producers, and exporters met in Gradačac to agree on key
+                    conclusions and
+                    urgent actions regarding seasonal protective pricing, trade measures with the EU, and support
+                    mechanisms for
+                    mitigating losses in the fruit and vegetable export sector.
+                  </p>
+
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar">
+                        <i class="ri-user-line"></i>
+                      </div>
+                      <span class="news__author-name">RC ARGONET</span>
+                    </div>
+
+                    <a href="#" class="news-card__read-more">
+                      Read <i class="ri-arrow-right-line"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 15-->
+              <article class="news-card reveal" data-category="analysis agriculture trade">
+                <div class="news-card__image">
+                  <div class="news-card__image-placeholder news-card__image-placeholder--teal">
+                    <i class="ri-bar-chart-line"></i>
+                    <i class="ri-number-1"></i>
+                    <i class="ri-number-5"></i>
+                  </div>
+                </div>
+                <div class="news-card__body">
+                  <div class="news-card__meta">
+                    <span class="news__category news__category--teal">Analysis</span>
+                    <span class="news__date">
+                      <i class="ri-calendar-line"></i> 2015
+                    </span>
+                  </div>
+
+                  <h3 class="news-card__title">
+                    Plum – the “Forgotten” Potential
+                  </h3>
+
+                  <p class="news-card__excerpt">
+                    Despite excellent agro-ecological conditions, tradition, and recognised quality on EU and Russian
+                    markets,
+                    plum production in Bosnia and Herzegovina faces challenges due to outdated practices, plant
+                    diseases,
+                    production volatility, and EU protective pricing measures that limit export growth.
+                  </p>
+
+                  <div class="news-card__footer">
+                    <div class="news__author">
+                      <div class="news__author-avatar">
+                        <i class="ri-user-line"></i>
+                      </div>
+                      <span class="news__author-name">RC ARGONET</span>
+                    </div>
+
+                    <a href="#" class="news-card__read-more">
+                      Read <i class="ri-arrow-right-line"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+            </div><!-- /news-grid__layout -->
+
+            <!--========== PAGINATION ==========-->
+            <nav class="news-pagination">
+              <a href="#" class="pagination__btn pagination__btn--arrow">
+                <i class="ri-arrow-left-line"></i> Prev
+              </a>
+              <a href="#" class="pagination__btn active">1</a>
+              <a href="#" class="pagination__btn">2</a>
+              <a href="#" class="pagination__btn">3</a>
+              <span class="pagination__btn" style="cursor:default;color:var(--text-color-light);">…</span>
+              <a href="#" class="pagination__btn">8</a>
+              <a href="#" class="pagination__btn pagination__btn--arrow">
+                Next <i class="ri-arrow-right-line"></i>
+              </a>
+            </nav>
+          </div>
+
+          <!--========== SIDEBAR ==========-->
+          <aside class="news-sidebar">
+
+            <!-- Search -->
+            <div class="sidebar__widget">
+              <h3 class="sidebar__widget-title">Search</h3>
+              <div class="sidebar__search">
+                <input type="text" placeholder="Search news…" aria-label="Search news">
+                <button aria-label="Search"><i class="ri-search-line"></i></button>
+              </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar__widget">
+              <h3 class="sidebar__widget-title">Categories</h3>
+              <div class="sidebar__categories">
+                <div class="sidebar__category" data-filter="all">
+                  All News <span>9</span>
+                </div>
+                <div class="sidebar__category" data-filter="project-updates">
+                  Project Updates <span>3</span>
+                </div>
+                <div class="sidebar__category" data-filter="eu-policy">
+                  EU Policy <span>3</span>
+                </div>
+                <div class="sidebar__category" data-filter="agriculture">
+                  Agriculture <span>1</span>
+                </div>
+                <div class="sidebar__category" data-filter="capacity-building">
+                  Capacity Building <span>2</span>
+                </div>
+                <div class="sidebar__category" data-filter="events">
+                  Events &amp; Trainings <span>2</span>
+                </div>
+                <div class="sidebar__category" data-filter="partnerships">
+                  Partnerships <span>1</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="sidebar__widget">
+              <h3 class="sidebar__widget-title">Recent Posts</h3>
+              <div class="sidebar__recent">
+                <div class="sidebar__recent-item">
+                  <div class="sidebar__recent-thumb"><i class="ri-leaf-line"></i></div>
+                  <div>
+                    <a href="#" class="sidebar__recent-title">
+                      GlobalG.A.P. Pilot Reaches 50 Farms
+                    </a>
+                    <div class="sidebar__recent-date">Jan 28, 2026</div>
+                  </div>
+                </div>
+                <div class="sidebar__recent-item">
+                  <div class="sidebar__recent-thumb"><i class="ri-government-line"></i></div>
+                  <div>
+                    <a href="#" class="sidebar__recent-title">
+                      EUDR Compliance Workshop — 120 Participants
+                    </a>
+                    <div class="sidebar__recent-date">Jan 20, 2026</div>
+                  </div>
+                </div>
+                <div class="sidebar__recent-item">
+                  <div class="sidebar__recent-thumb">
+                    <i class="ri-apple-line"></i>
+                  </div>
+                  <div>
+                    <a href="#" class="sidebar__recent-title">
+                      BiH Apple Exporters Show Strong EU Growth Potential
+                    </a>
+                    <div class="sidebar__recent-date">Jan 14, 2026</div>
+                  </div>
+                </div>
+                <div class="sidebar__recent-item">
+                  <div class="sidebar__recent-thumb"><i class="ri-graduation-cap-line"></i></div>
+                  <div>
+                    <a href="#" class="sidebar__recent-title">
+                      Youth Agribusiness Programme Graduates First Cohort
+                    </a>
+                    <div class="sidebar__recent-date">Jan 8, 2026</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <div class="sidebar__widget">
+              <h3 class="sidebar__widget-title">Tags</h3>
+              <div class="sidebar__tags">
+                <span class="sidebar__tag">GlobalG.A.P.</span>
+                <span class="sidebar__tag">EUDR</span>
+                <span class="sidebar__tag">Traceability</span>
+                <span class="sidebar__tag">EU Integration</span>
+                <span class="sidebar__tag">Agriculture</span>
+                <span class="sidebar__tag">Training</span>
+                <span class="sidebar__tag">USAID</span>
+                <span class="sidebar__tag">GIZ</span>
+                <span class="sidebar__tag">Green Transition</span>
+                <span class="sidebar__tag">Standards</span>
+                <span class="sidebar__tag">BiH</span>
+                <span class="sidebar__tag">SDGs</span>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="sidebar__widget">
+              <h3 class="sidebar__widget-title">Stay Updated</h3>
+              <p
+                style="font-size:var(--smaller-font-size);color:var(--text-color-light);line-height:1.6;margin-bottom:1rem;">
+                Get the latest news and project updates delivered to your inbox.
+              </p>
+              <div class="sidebar__newsletter-form newsletter__form">
+                <input type="email" placeholder="Your email address" class="newsletter__input"
+                  aria-label="Email address">
+                <button class="button button--small">Subscribe</button>
+              </div>
+            </div>
+
+          </aside>
+        </div><!-- /news-layout -->
+      </div>
+    </section>
+
+  </main>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div>
+        <div class="footer__logo">
+          <a href="index.html" class="nav__logo">
+            <span class="logo__span-mark">RC</span>
+            <span class="logo__span-argo"><span style="color: var(--second-color);">ARGO</span><span
+                class="logo__span-net">NET</span></span>
+          </a>
+        </div>
+        <p class="footer__desc">
+          Bridging European standards.<br>
+          Driving sustainable growth and<br>
+          innovation for local communities.
+        </p>
+        <address class="footer__email">
+          Email: <a href="mailto:rcargonet@gmail.com">rcargonet@gmail.com</a>
+        </address>
+      </div>
+
+      <div class="footer__links-grid">
+        <div class="footer__col">
+          <h3>Company</h3>
+          <ul class="footer__list">
+            <li><a href="#about" class="footer__link">About Us</a></li>
+            <li><a href="index.html#governance" class="footer__link">Structure</a></li>
+            <li><a href="index.html#contact" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Transparency</h3>
+          <ul class="footer__list">
+            <li><a href="#units" class="footer__link">Annual Report</a></li>
+            <li>
+              <a href="assets/pdf/11_RCA-GEP-011_Gender_Equality_Plan.pdf" target="_blank" class="footer__link">Gender
+                Equality Plan</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Social Media</h3>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/rcargonetbl/" target="_blank" class="footer__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rcargonet/" target="_blank" class="footer__social-link">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span class="footer__copy container">©
+      <script>
+        document.write(new Date().getFullYear());
+      </script>. Razvojni Centar ARGONET. All rights reserved.
+    </span>
+  </footer>
+
+  <!--==================== SCROLL UP ====================-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  <!--=============== SCRIPT ===============-->
+  <script src="assets/js/script.js"></script>
+
+  <script>
+    /*=============== NEWS FILTER LOGIC ===============*/
+    const newsFilters = document.querySelectorAll('.news-filter, .sidebar__category');
+    const newsCards = document.querySelectorAll('.news-card[data-category]');
+    const featuredCard = document.querySelector('.news-featured__card[data-category]');
+
+    function applyFilter(filter) {
+      // Sync all filter buttons
+      document.querySelectorAll('.news-filter').forEach(f => {
+        f.classList.toggle('active', f.dataset.filter === filter);
+      });
+      document.querySelectorAll('.sidebar__category').forEach(f => {
+        f.classList.toggle('active', f.dataset.filter === filter);
+      });
+
+      // Filter news cards
+      newsCards.forEach(card => {
+        const cats = card.dataset.category || '';
+        const show = filter === 'all' || cats.includes(filter);
+
+        card.style.transition = 'opacity 0.3s, transform 0.3s';
+        if (show) {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+          card.style.display = 'flex';
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(10px)';
+          setTimeout(() => {
+            if (card.style.opacity === '0') card.style.display = 'none';
+          }, 300);
+        }
+      });
+
+      // Filter featured card
+      if (featuredCard) {
+        const featCat = featuredCard.dataset.category || '';
+        const showFeat = filter === 'all' || featCat.includes(filter);
+        featuredCard.closest('section').style.display = showFeat ? '' : 'none';
+      }
+    }
+
+    newsFilters.forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter || 'all'));
+    });
+
+    /*=============== SIDEBAR SEARCH ===============*/
+    const searchInput = document.querySelector('.sidebar__search input');
+    const searchBtn = document.querySelector('.sidebar__search button');
+
+    function doSearch() {
+      const query = searchInput?.value.trim().toLowerCase();
+      if (!query) { newsCards.forEach(c => c.style.display = 'flex'); return; }
+
+      newsCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const show = text.includes(query);
+        card.style.display = show ? 'flex' : 'none';
+      });
+    }
+
+    searchBtn?.addEventListener('click', doSearch);
+    searchInput?.addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+  </script>
+</body>
+
+</html>

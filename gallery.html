@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <title>Gallery - RC ARGONET</title>
+</head>
+
+<body>
+
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/img/rc-agronet-logo-470x390.png" alt="RC ARGONET logo" class="logo__img">
+        <span class="logo__span-argo"><span>RC&nbsp;ARGO</span><span class="logo__span-net">NET</span></span>
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-large-line"></i>
+        </div>
+        <ul class="nav__list">
+          <li><a href="index.html#home" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="index.html#areas" class="nav__link">Areas</a></li>
+          <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+          <li><a href="news.html" class="nav__link">News</a></li>
+          <li><a href="#" class="nav__link active-link">Gallery</a></li>
+          <li><a href="index.html#contact" class="nav__link button">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!--==================== MAIN ====================-->
+  <main class="main">
+
+    <!--==================== GALLERY HERO ====================-->
+    <section class="gallery-hero">
+      <div class="gallery-hero__content container">
+        <span class="gallery-hero__label">Photo Gallery</span>
+        <h1 class="gallery-hero__title">Our Work in Pictures</h1>
+        <p class="gallery-hero__desc">
+          A visual journey through our projects, field activities, training sessions,
+          and partnerships across Bosnia and Herzegovina and the wider region.
+        </p>
+        <div class="gallery-hero__breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="ri-arrow-right-s-line"></i>
+          <span>Gallery</span>
+        </div>
+      </div>
+    </section>
+
+    <!--==================== STATS BAR ====================-->
+    <div class="gallery-stats">
+      <div class="gallery-stats__inner container">
+        <div class="gallery-stat">
+          <i class="ri-image-line"></i>
+          <span><strong>120+</strong> Photos</span>
+        </div>
+        <div class="gallery-stat">
+          <i class="ri-folder-line"></i>
+          <span><strong>8</strong> Albums</span>
+        </div>
+        <div class="gallery-stat">
+          <i class="ri-map-pin-line"></i>
+          <span><strong>15+</strong> Locations</span>
+        </div>
+        <div class="gallery-stat">
+          <i class="ri-calendar-line"></i>
+          <span>Updated <strong>February 2026</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!--==================== FILTER BAR ====================-->
+    <div class="gallery-filters">
+      <div class="gallery-filters__inner container">
+        <div class="gallery-filters__chips">
+          <span class="gallery-filter active" data-filter="all">All</span>
+          <span class="gallery-filter" data-filter="field-work">Field Work</span>
+          <span class="gallery-filter" data-filter="training">Training &amp; Workshops</span>
+          <span class="gallery-filter" data-filter="events">Events &amp; Conferences</span>
+          <span class="gallery-filter" data-filter="partnerships">Partnerships</span>
+          <span class="gallery-filter" data-filter="agriculture">Agriculture</span>
+          <span class="gallery-filter" data-filter="community">Community</span>
+        </div>
+        <div class="gallery-filters__view">
+          <button class="view-btn active" data-view="4col" title="4 columns">
+            <i class="ri-layout-grid-fill"></i>
+          </button>
+          <button class="view-btn" data-view="3col" title="3 columns">
+            <i class="ri-layout-grid-line"></i>
+          </button>
+          <button class="view-btn" data-view="2col" title="2 columns">
+            <i class="ri-layout-column-line"></i>
+          </button>
+          <button class="view-btn" data-view="list" title="List view">
+            <i class="ri-list-check"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--==================== GALLERY GRID ====================-->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-grid" id="gallery-grid">
+
+          <!-- Item 1 -->
+          <div class="gallery-item" data-category="field-work" data-index="0" data-title="Agri-Standards Field Visit"
+            data-tag="Field Work">
+            <div class="gallery-item__inner">
+              <img src="assets/img/polje.jpg" alt="Field visit" class="gallery-item__img"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h1"
+                style="background:linear-gradient(135deg,#145d2e,#19763b);display:none">
+                <i class="ri-plant-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Agri-Standards Field Visit</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Field Work</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item" data-category="training" data-index="1" data-title="GlobalG.A.P. Training Session"
+            data-tag="Training">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h2"
+                style="background:linear-gradient(135deg,#0f2744,#1a365d)">
+                <i class="ri-graduation-cap-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">GlobalG.A.P. Training Session</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Training</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item" data-category="agriculture" data-index="2"
+            data-title="Apple Orchard — Certification Visit" data-tag="Agriculture">
+            <div class="gallery-item__inner">
+              <img src="assets/img/jabuka.jpg" alt="Apple orchard" class="gallery-item__img"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h3"
+                style="background:linear-gradient(135deg,#7b341e,#c05621);display:none">
+                <i class="ri-leaf-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Apple Orchard — Certification Visit</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Agriculture</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="gallery-item" data-category="events" data-index="3" data-title="Digital Agriculture Forum 2025"
+            data-tag="Events">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h4"
+                style="background:linear-gradient(135deg,#44337a,#6b46c1)">
+                <i class="ri-calendar-event-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Digital Agriculture Forum 2025</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Events</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="gallery-item" data-category="partnerships" data-index="4"
+            data-title="GIZ ProLocal Partnership Signing" data-tag="Partnerships">
+            <div class="gallery-item__inner">
+              <img src="assets/img/giz.jpg" alt="GIZ Partnership" class="gallery-item__img"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h2"
+                style="background:linear-gradient(135deg,#1a535c,#2c7a7b);display:none">
+                <i class="ri-shake-hands-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">GIZ ProLocal Partnership Signing</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Partnerships</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="gallery-item" data-category="community" data-index="5"
+            data-title="Rural Community Engagement, Birač Region" data-tag="Community">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h3"
+                style="background:linear-gradient(135deg,#145d2e,#19763b)">
+                <i class="ri-community-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Rural Community Engagement, Birač Region</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Community</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 7 -->
+          <div class="gallery-item" data-category="field-work" data-index="6"
+            data-title="Soil Sampling — Banja Luka Surroundings" data-tag="Field Work">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h5"
+                style="background:linear-gradient(135deg,#7b341e,#c05621)">
+                <i class="ri-microscope-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Soil Sampling — Banja Luka Surroundings</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Field Work</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8 -->
+          <div class="gallery-item" data-category="training" data-index="7"
+            data-title="EUDR Compliance Workshop — Sarajevo" data-tag="Training">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h1"
+                style="background:linear-gradient(135deg,#0f2744,#1a365d)">
+                <i class="ri-shield-check-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">EUDR Compliance Workshop — Sarajevo</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Training</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9 -->
+          <div class="gallery-item" data-category="agriculture" data-index="8"
+            data-title="Raspberry Harvest — Birač Valley" data-tag="Agriculture">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h2"
+                style="background:linear-gradient(135deg,#44337a,#6b46c1)">
+                <i class="ri-seedling-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Raspberry Harvest — Birač Valley</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Agriculture</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 10 -->
+          <div class="gallery-item" data-category="events partnerships" data-index="9"
+            data-title="USAID FARMA II Project Launch" data-tag="Events">
+            <div class="gallery-item__inner">
+              <img src="assets/img/usaid.jpg" alt="USAID Event" class="gallery-item__img"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h4"
+                style="background:linear-gradient(135deg,#1a535c,#2c7a7b);display:none">
+                <i class="ri-flag-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">USAID FARMA II Project Launch</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Events</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 11 -->
+          <div class="gallery-item" data-category="community field-work" data-index="10"
+            data-title="Municipal Advisory Visit — Foča" data-tag="Community">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h3"
+                style="background:linear-gradient(135deg,#145d2e,#19763b)">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Municipal Advisory Visit — Foča</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Community</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 12 -->
+          <div class="gallery-item" data-category="training events" data-index="11"
+            data-title="Youth Agribusiness Graduation Ceremony" data-tag="Training">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h5"
+                style="background:linear-gradient(135deg,#7b341e,#c05621)">
+                <i class="ri-award-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Youth Agribusiness Graduation Ceremony</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Training</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 13 -->
+          <div class="gallery-item" data-category="field-work agriculture" data-index="12"
+            data-title="Organic Farm Inspection — Banja Luka" data-tag="Field Work">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h2"
+                style="background:linear-gradient(135deg,#44337a,#6b46c1)">
+                <i class="ri-search-eye-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Organic Farm Inspection — Banja Luka</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Field Work</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 14 -->
+          <div class="gallery-item" data-category="partnerships events" data-index="13"
+            data-title="EU Delegation Meeting — Brussels Visit" data-tag="Partnerships">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h4"
+                style="background:linear-gradient(135deg,#0f2744,#1a365d)">
+                <i class="ri-global-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">EU Delegation Meeting — Brussels Visit</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Partnerships</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 15 -->
+          <div class="gallery-item" data-category="community" data-index="14"
+            data-title="Women in Agriculture Workshop — Mrkonjić Grad" data-tag="Community">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h1"
+                style="background:linear-gradient(135deg,#1a535c,#2c7a7b)">
+                <i class="ri-group-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Women in Agriculture Workshop — Mrkonjić Grad</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Community</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 16 -->
+          <div class="gallery-item" data-category="training" data-index="15"
+            data-title="Grant Writing Masterclass — Online Session" data-tag="Training">
+            <div class="gallery-item__inner">
+              <div class="gallery-item__placeholder gallery-item__placeholder--h3"
+                style="background:linear-gradient(135deg,#145d2e,#19763b)">
+                <i class="ri-file-text-line"></i>
+              </div>
+              <div class="gallery-item__overlay">
+                <h3 class="gallery-item__title">Grant Writing Masterclass — Online Session</h3>
+                <div class="gallery-item__meta">
+                  <span class="gallery-item__tag">Training</span>
+                  <span class="gallery-item__zoom"><i class="ri-zoom-in-line"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /gallery-grid -->
+
+        <!--==================== LOAD MORE ====================-->
+        <div class="gallery-load-more">
+          <button class="button button--outline" id="load-more-btn">
+            <i class="ri-add-line"></i> Load More Photos
+          </button>
+          <p id="load-more-count">Showing 16 of 120+ photos</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!--==================== LIGHTBOX ====================-->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Close">
+      <i class="ri-close-line"></i>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous">
+      <i class="ri-arrow-left-line"></i>
+    </button>
+    <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next">
+      <i class="ri-arrow-right-line"></i>
+    </button>
+
+    <div class="lightbox__inner">
+      <div class="lightbox__media" id="lightbox-media"></div>
+      <div class="lightbox__caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-tag"></p>
+      </div>
+    </div>
+
+    <div class="lightbox__counter" id="lightbox-counter"></div>
+  </div>
+
+  <!--==================== FOOTER ====================-->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div>
+        <div class="footer__logo">
+          <a href="index.html" class="nav__logo">
+            <img src="assets/img/rc-agronet-logo-470x390.png" alt="RC ARGONET logo" class="logo__img">
+            <span class="logo__span-argo"><span style="color: var(--second-color);">RC&nbsp;ARGO</span><span
+                class="logo__span-net">NET</span></span>
+          </a>
+        </div>
+        <p class="footer__desc">
+          Bridging European standards.<br>
+          Driving sustainable growth and<br>
+          innovation for local communities.
+        </p>
+        <address class="footer__email">
+          Email: <a href="mailto:rcargonet@gmail.com">rcargonet@gmail.com</a>
+        </address>
+      </div>
+
+      <div class="footer__links-grid">
+        <div class="footer__col">
+          <h3>Company</h3>
+          <ul class="footer__list">
+            <li><a href="about.html" class="footer__link">About Us</a></li>
+            <li><a href="index.html#areas" class="footer__link">Services</a></li>
+            <li><a href="about.html#about-projects" class="footer__link">Projects</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Media</h3>
+          <ul class="footer__list">
+            <li><a href="news.html" class="footer__link">News &amp; Updates</a></li>
+            <li><a href="gallery.html" class="footer__link">Photo Gallery</a></li>
+            <li>
+              <a href="assets/pdf/11_RCA-GEP-011_Gender_Equality_Plan.pdf" target="_blank" class="footer__link">Gender
+                Equality Plan</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Social Media</h3>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/rcargonetbl/" target="_blank" class="footer__social-link">
+              <i class="ri-facebook-fill"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rcargonet/" target="_blank" class="footer__social-link">
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span class="footer__copy container">© RC ARGONET. All rights reserved. 2026.</span>
+  </footer>
+
+  <!--==================== SCROLL UP ====================-->
+  <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+
+  <!--=============== SHARED SCRIPT ===============-->
+  <script src="assets/js/script.js"></script>
+
+  <!--=============== GALLERY SCRIPT ===============-->
+  <script>
+    /*=============== GALLERY FILTER ===============*/
+    const galleryFilters = document.querySelectorAll('.gallery-filter');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    function applyGalleryFilter(filter) {
+      galleryFilters.forEach(f => f.classList.toggle('active', f.dataset.filter === filter));
+
+      galleryItems.forEach(item => {
+        const cats = item.dataset.category || '';
+        const show = filter === 'all' || cats.split(' ').includes(filter);
+        item.style.transition = 'opacity 0.35s, transform 0.35s';
+
+        if (show) {
+          item.classList.remove('hidden');
+          requestAnimationFrame(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          });
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.94)';
+          setTimeout(() => {
+            if (item.style.opacity === '0') item.classList.add('hidden');
+          }, 350);
+        }
+      });
+    }
+
+    galleryFilters.forEach(btn => {
+      btn.addEventListener('click', () => applyGalleryFilter(btn.dataset.filter));
+    });
+
+    /*=============== VIEW SWITCHER ===============*/
+    const viewBtns = document.querySelectorAll('.view-btn');
+    const galleryGrid = document.getElementById('gallery-grid');
+
+    viewBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        viewBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        galleryGrid.className = 'gallery-grid';
+        const view = btn.dataset.view;
+        if (view === '3col') galleryGrid.classList.add('view-3col');
+        if (view === '2col') galleryGrid.classList.add('view-2col');
+        if (view === 'list') galleryGrid.classList.add('view-list');
+      });
+    });
+
+    /*=============== LIGHTBOX ===============*/
+    const lightbox = document.getElementById('lightbox');
+    const lbMedia = document.getElementById('lightbox-media');
+    const lbTitle = document.getElementById('lightbox-title');
+    const lbTag = document.getElementById('lightbox-tag');
+    const lbCounter = document.getElementById('lightbox-counter');
+    const lbClose = document.getElementById('lightbox-close');
+    const lbPrev = document.getElementById('lightbox-prev');
+    const lbNext = document.getElementById('lightbox-next');
+
+    let currentIndex = 0;
+    let visibleItems = [];
+
+    function getVisibleItems() {
+      return [...galleryItems].filter(item => !item.classList.contains('hidden'));
+    }
+
+    function renderLightbox(index) {
+      visibleItems = getVisibleItems();
+      if (!visibleItems.length) return;
+
+      currentIndex = (index + visibleItems.length) % visibleItems.length;
+      const item = visibleItems[currentIndex];
+
+      const img = item.querySelector('.gallery-item__img');
+      const ph = item.querySelector('.gallery-item__placeholder');
+      const title = item.dataset.title || '';
+      const tag = item.dataset.tag || '';
+
+      // Build media content
+      if (img && img.style.display !== 'none') {
+        lbMedia.innerHTML = `<img src="${img.src}" alt="${title}">`;
+      } else if (ph) {
+        // Clone placeholder style for lightbox
+        const bg = ph.style.background || '#1a365d';
+        const icon = ph.querySelector('i')?.className || 'ri-image-line';
+        lbMedia.innerHTML = `
+          <div style="width:100%;height:50vh;background:${bg};border-radius:.75rem;
+               display:flex;align-items:center;justify-content:center;font-size:6rem;
+               color:rgba(255,255,255,0.35);">
+            <i class="${icon}"></i>
+          </div>`;
+      }
+
+      lbTitle.textContent = title;
+      lbTag.textContent = tag;
+      lbCounter.textContent = `${currentIndex + 1} / ${visibleItems.length}`;
+    }
+
+    function openLightbox(index) {
+      renderLightbox(index);
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Open on item click
+    galleryItems.forEach((item, i) => {
+      item.addEventListener('click', () => {
+        visibleItems = getVisibleItems();
+        const vIndex = visibleItems.indexOf(item);
+        openLightbox(vIndex);
+      });
+    });
+
+    // Nav buttons
+    lbClose.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', () => renderLightbox(currentIndex - 1));
+    lbNext.addEventListener('click', () => renderLightbox(currentIndex + 1));
+
+    // Close on backdrop
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') renderLightbox(currentIndex - 1);
+      if (e.key === 'ArrowRight') renderLightbox(currentIndex + 1);
+    });
+
+    // Touch / swipe support
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    lightbox.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? renderLightbox(currentIndex + 1) : renderLightbox(currentIndex - 1);
+      }
+    });
+
+    /*=============== LOAD MORE (simulation) ===============*/
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreCount = document.getElementById('load-more-count');
+    let loadedCount = 16;
+
+    loadMoreBtn?.addEventListener('click', () => {
+      loadMoreBtn.innerHTML = '<i class="ri-loader-4-line"></i> Loading…';
+      loadMoreBtn.disabled = true;
+
+      setTimeout(() => {
+        loadedCount += 8;
+        const total = 120;
+        loadMoreCount.textContent = `Showing ${Math.min(loadedCount, total)} of ${total}+ photos`;
+
+        if (loadedCount >= total) {
+          loadMoreBtn.style.display = 'none';
+          loadMoreCount.textContent = `All ${total}+ photos loaded`;
+        } else {
+          loadMoreBtn.innerHTML = '<i class="ri-add-line"></i> Load More Photos';
+          loadMoreBtn.disabled = false;
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+
+</html>
