@@ -3130,9 +3130,6 @@ address {
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .news-card:hover {
@@ -3270,16 +3267,6 @@ address {
   grid-template-columns: 1fr 320px;
   gap: 2.5rem;
   align-items: start;
-  min-width: 0;
-}
-
-.news-layout > * {
-  min-width: 0;
-}
-
-.news-grid__layout {
-  min-width: 0;
-  width: 100%;
 }
 
 .news-sidebar {
