@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Local Partnership for Employment Board Meeting - RC ARGONET</title>
+
+    <style>
+        .post-detail {
+            padding-block: 10rem 5rem;
+            background-color: var(--body-color);
+        }
+
+        .post-detail__container {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+        }
+
+        .post-content {
+            background: var(--white-color);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-small);
+        }
+
+        .post-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: var(--first-color-light);
+            color: var(--first-color);
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: var(--smaller-font-size);
+            font-weight: var(--font-bold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .post-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-family: var(--logo-font);
+            color: var(--second-color);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: var(--text-color-light);
+            font-size: var(--small-font-size);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            background: var(--cream-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            font-size: 5rem;
+            color: var(--first-color);
+        }
+
+        .post-body {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .post-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body h3 {
+            margin: 2rem 0 1rem;
+            color: var(--second-color);
+        }
+
+        .post-body ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-footer {
+            margin-top: 4rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-share {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .post-share-link {
+            width: 40px;
+            height: 40px;
+            background: var(--body-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--second-color);
+            transition: 0.3s;
+        }
+
+        .post-share-link:hover {
+            background: var(--second-color);
+            color: var(--white-color);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .post-detail__container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar__widget {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header scrolled" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/rc-agronet-logo-470x390.png" alt="RC ARGONET logo" class="logo__img">
+                <span class="logo__span-argo"><span>RC&nbsp;ARGO</span><span class="logo__span-net">NET</span></span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="news.html" class="nav__link active-link">News</a></li>
+                    <li><a href="index.html#contact" class="nav__link button">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="post-detail">
+            <div class="post-detail__container container">
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-category">Governance</span>
+                        <h1 class="post-title">Steering Board Meeting of the Local Employment Partnership in Banja Luka
+                        </h1>
+                        <div class="post-meta">
+                            <span><i class="ri-calendar-line"></i> Jun 13, 2018</span>
+                            <span><i class="ri-user-line"></i> By RC ARGONET</span>
+                        </div>
+                    </div>
+
+                    <div class="post-image">
+                        <i class="ri-team-line"></i>
+                    </div>
+
+                    <div class="post-body">
+                        <p>
+                            A meeting of the Steering Board of the <strong>Local Partnership for Employment Banja
+                                Luka</strong> was held today, focusing on key activities and future steps in the
+                            implementation of partner initiatives.
+                        </p>
+                        <p>
+                            The discussion covered several vital topics related to the development of the local
+                            agricultural and employment sectors, ensuring coordination among all involved stakeholders.
+                        </p>
+
+                        <h3>Key Topics of the Meeting</h3>
+                        <p>Partners engaged in detailed reports and planning regarding:</p>
+                        <ul>
+                            <li>The current progress of agricultural production.</li>
+                            <li>The organization and strengthening of agricultural cooperatives.</li>
+                            <li>The development of the <strong>Urban Farm</strong> (Experimental Field).</li>
+                            <li>Certification of production according to <strong>organic production standards</strong>.
+                            </li>
+                            <li>Market development and access strategies for local producers.</li>
+                        </ul>
+
+                        <h3>Meeting Participants</h3>
+                        <p>The meeting brought together representatives from institutional and organizational partners,
+                            including:</p>
+                        <ul>
+                            <li>RS Employment Bureau</li>
+                            <li>Grad Banja Luka</li>
+                            <li>Faculty of Agriculture, University of Banja Luka</li>
+                            <li><strong>RC ARGONET</strong></li>
+                            <li>GOPA mbH / YEP</li>
+                            <li>Caritas Switzerland</li>
+                        </ul>
+                        <p>
+                            RC ARGONET continues its active participation in the partnership, focusing on supporting
+                            organic production development, certification processes, and enhancing the market capacity
+                            of local farmers.
+                        </p>
+                    </div>
+
+                    <div class="post-footer">
+                        <a href="news.html" class="button__link"><i class="ri-arrow-left-line"></i> Back to News</a>
+                    </div>
+                </div>
+
+                <aside class="news-sidebar">
+                    <div class="sidebar__widget">
+                        <h3 class="sidebar__widget-title">Governance</h3>
+                        <p style="font-size:var(--smaller-font-size);color:var(--text-color-light);line-height:1.6;">
+                            Regular coordination meetings ensure the success of multi-stakeholder partnerships.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span class="footer__copy container">© 2026 RC ARGONET. All rights reserved.</span>
+    </footer>
+</body>
+
+</html>

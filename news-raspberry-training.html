@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Raspberry Market and Production Training - RC ARGONET</title>
+
+    <style>
+        .post-detail {
+            padding-block: 10rem 5rem;
+            background-color: var(--body-color);
+        }
+
+        .post-detail__container {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+        }
+
+        .post-content {
+            background: var(--white-color);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-small);
+        }
+
+        .post-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: var(--first-color-light);
+            color: var(--first-color);
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: var(--smaller-font-size);
+            font-weight: var(--font-bold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .post-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-family: var(--logo-font);
+            color: var(--second-color);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: var(--text-color-light);
+            font-size: var(--small-font-size);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            background: var(--cream-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            font-size: 5rem;
+            color: var(--first-color);
+        }
+
+        .post-body {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .post-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body h3 {
+            margin: 2rem 0 1rem;
+            color: var(--second-color);
+        }
+
+        .post-body ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-footer {
+            margin-top: 4rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-share {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .post-share-link {
+            width: 40px;
+            height: 40px;
+            background: var(--body-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--second-color);
+            transition: 0.3s;
+        }
+
+        .post-share-link:hover {
+            background: var(--second-color);
+            color: var(--white-color);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .post-detail__container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar__widget {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header scrolled" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/rc-agronet-logo-470x390.png" alt="RC ARGONET logo" class="logo__img">
+                <span class="logo__span-argo"><span>RC&nbsp;ARGO</span><span class="logo__span-net">NET</span></span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="news.html" class="nav__link active-link">News</a></li>
+                    <li><a href="index.html#contact" class="nav__link button">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="post-detail">
+            <div class="post-detail__container container">
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-category">Capacity Building</span>
+                        <h1 class="post-title">RC ARGONET Participates in Professional Training on Raspberry Market and
+                            Production in Bihać</h1>
+                        <div class="post-meta">
+                            <span><i class="ri-calendar-line"></i> Nov 27, 2019</span>
+                            <span><i class="ri-user-line"></i> By RC ARGONET</span>
+                        </div>
+                    </div>
+
+                    <div class="post-image">
+                        <i class="ri-presentation-line"></i>
+                    </div>
+
+                    <div class="post-body">
+                        <p>
+                            A professional training session titled <strong>“Raspberry Market and Production”</strong>
+                            was held in Bihać, organized by the Foreign Trade Chamber of Bosnia and Herzegovina and
+                            Switzerland Global Enterprise / SIPPO, in cooperation with the Chamber of Commerce of
+                            Una-Sana Canton.
+                        </p>
+                        <p>
+                            The training aimed to strengthen the export capacities of companies in the fresh fruit and
+                            vegetable sector, bringing together representatives of institutions, academia, corporations,
+                            and producers from across the region.
+                        </p>
+
+                        <h3>Expert Speakers</h3>
+                        <p>The session was led by renowned experts in the field:</p>
+                        <ul>
+                            <li><strong>Prof. Dr. Nikola Mićić</strong>, Dean of the Faculty of Agriculture in Banja
+                                Luka.</li>
+                            <li><strong>Mile Gluvačević</strong>, expert for organic production and representative of RC
+                                ARGONET Banja Luka.</li>
+                        </ul>
+
+                        <h3>Key Topics Covered</h3>
+                        <p>During the training, participants learned about:</p>
+                        <ul>
+                            <li>Raspberry planting and cultivation technology.</li>
+                            <li>Current state and trends of the market in BiH and worldwide.</li>
+                            <li>Recommended varieties (Himbo Top, Amira, Kwanza, etc.) and freezing varieties
+                                (Willamette, Meeker).</li>
+                        </ul>
+
+                        <h3>Support for Organic Certification</h3>
+                        <p>
+                            A special segment was dedicated to organic production. Mile Gluvačević highlighted that RC
+                            ARGONET provides <strong>free support</strong> for implementation towards certification.
+                            This includes initial situation analysis, infrastructure guidelines, documentation
+                            preparation, and staff training.
+                        </p>
+                        <p>
+                            RC ARGONET continues to actively support local producers and companies through expert
+                            technical assistance and capacity-building programs, ensuring their competitiveness on
+                            international markets.
+                        </p>
+                    </div>
+
+                    <div class="post-footer">
+                        <a href="news.html" class="button__link"><i class="ri-arrow-left-line"></i> Back to News</a>
+                        <div class="post-share">
+                            <a href="#" class="post-share-link"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" class="post-share-link"><i class="ri-linkedin-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="news-sidebar">
+                    <div class="sidebar__widget">
+                        <h3 class="sidebar__widget-title">Stay Updated</h3>
+                        <div class="sidebar__newsletter-form">
+                            <input type="email" placeholder="Email address"
+                                style="width:100%;margin-bottom:0.5rem;padding:0.75rem;border:1px solid var(--border-color);border-radius:0.5rem;">
+                            <button class="button button--small" style="width:100%;">Subscribe</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span class="footer__copy container">© 2026 RC ARGONET. All rights reserved.</span>
+    </footer>
+</body>
+
+</html>

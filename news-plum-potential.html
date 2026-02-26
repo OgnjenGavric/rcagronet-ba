@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Plum – the “Forgotten” Potential - RC ARGONET</title>
+
+    <style>
+        .post-detail {
+            padding-block: 10rem 5rem;
+            background-color: var(--body-color);
+        }
+
+        .post-detail__container {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+        }
+
+        .post-content {
+            background: var(--white-color);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-small);
+        }
+
+        .post-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: var(--first-color-light);
+            color: var(--first-color);
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: var(--smaller-font-size);
+            font-weight: var(--font-bold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .post-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-family: var(--logo-font);
+            color: var(--second-color);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: var(--text-color-light);
+            font-size: var(--small-font-size);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+        }
+
+        .post-body {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .post-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body h2,
+        .post-body h3 {
+            margin: 2.5rem 0 1rem;
+            color: var(--second-color);
+        }
+
+        .post-body ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-footer {
+            margin-top: 4rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-share {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .post-share-link {
+            width: 40px;
+            height: 40px;
+            background: var(--body-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--second-color);
+            transition: 0.3s;
+        }
+
+        .post-share-link:hover {
+            background: var(--second-color);
+            color: var(--white-color);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .post-detail__container {
+                grid-template-columns: 1fr;
+            }
+
+            .news-sidebar {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .post-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--==================== HEADER ====================-->
+    <header class="header scrolled" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/rc-agronet-logo-470x390.png" alt="RC ARGONET logo" class="logo__img">
+                <span class="logo__span-argo"><span>RC&nbsp;ARGO</span><span class="logo__span-net">NET</span></span>
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+                <ul class="nav__list">
+                    <li><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li><a href="about.html" class="nav__link">About</a></li>
+                    <li><a href="index.html#areas" class="nav__link">Areas</a></li>
+                    <li><a href="index.html#partners" class="nav__link">Partners</a></li>
+                    <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+                    <li><a href="news.html" class="nav__link active-link">News</a></li>
+                    <li><a href="index.html#contact" class="nav__link button">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="post-detail">
+            <div class="post-detail__container container">
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-category">Analysis</span>
+                        <h1 class="post-title">Plum – the “Forgotten” Potential of Bosnia and Herzegovina</h1>
+                        <div class="post-meta">
+                            <span><i class="ri-calendar-line"></i> 2015</span>
+                            <span><i class="ri-user-line"></i> By RC ARGONET</span>
+                            <span><i class="ri-time-line"></i> 6 min read</span>
+                        </div>
+                    </div>
+
+                    <div class="post-image">
+                        <img src="assets/img/featured-1.jpeg" alt="Plum Orchard">
+                    </div>
+
+                    <div class="post-body">
+                        <p>
+                            What new can be written about a fruit tree that almost all of us have in our backyard and
+                            think we know everything about growing plums, and even more about "baking" brandy? But is it
+                            really so! Our well-known plum variety, the <strong>Požegača</strong> (also known as Savka
+                            or Mađarica), is almost on the verge of disappearing due to the Plum pox virus, which causes
+                            the Sharka disease.
+                        </p>
+                        <p>
+                            Furthermore, years of neglect regarding the introduction of new technologies and plum
+                            varieties into production have led to the fact that, quite unfairly, plum cultivation in RS
+                            and BiH is recovering slowly. Despite excellent agro-ecological conditions, tradition, and
+                            high-quality domestic varieties, many farmers, encouraged by promises of quick earnings,
+                            decide to grow snails, chinchillas, ostriches, or the latest "hit," Paulownia, rather than
+                            growing plums.
+                        </p>
+
+                        <h3>Market Performance and Exports</h3>
+                        <p>
+                            Judging by export data, plums grown in RS and BiH have found their place on supermarket
+                            shelves in the EU and Russia. The largest market for our plums is the EU, where Germany
+                            dominates. In 2015, German supermarkets purchased 2,500 tons, compared to 1,300 tons in
+                            2014. The record production of 2013 was also the cause of record plum exports, exceeding
+                            11,000,000 KM.
+                        </p>
+                        <p>
+                            Most exporters confirm the fact that our plum is competitive on the EU and Russian markets
+                            and that there is room for further export growth. Consumers have recognized the high
+                            organoleptic quality of plums grown in our region; earlier ripening times work in our favor,
+                            packaging is done according to the customer's wishes, and we are generally
+                            price-competitive.
+                        </p>
+
+                        <h3>Trade Barriers and Protective Pricing</h3>
+                        <p>
+                            What limits our exporters' access to the EU market is the <strong>protective price of 0.69
+                                Euro cents</strong> per 100 kg that the EU applies to plum imports from BiH. It is
+                            almost unbelievable that despite the Free Trade Agreement through the Stabilization and
+                            Association Agreement (SAA), Brussels is still allowed to introduce such measures against
+                            BiH. It is essential to urgently request the removal of these measures from the EU.
+                        </p>
+                        <p>
+                            Statistics show that plum production in RS and BiH is prone to high variations. From a
+                            record production of 133,581 tons in 2013 to nearly three times less in 2014. Such
+                            fluctuations are not surprising given that most plum orchards are not irrigated and even
+                            fewer are covered with anti-hail nets. Thus, hail, late spring frosts, and drought lead to
+                            significant oscillations in production.
+                        </p>
+
+                        <h3>Modern Technology and The Way Forward</h3>
+                        <p>
+                            Modern technologies in plum cultivation involve dense planting with spacing between rows of
+                            4–4.5 m and spacing within rows of 2–2.5 meters, depending on the variety, training system,
+                            and soil type. Regular protection usually involves 5 to 7 sprayings during the season to
+                            ensure appropriate fruit quality.
+                        </p>
+                        <p>
+                            To ensure sustainable growth, the following steps are necessary:
+                        </p>
+                        <ul>
+                            <li>Improve production technology and modernize infrastructure.</li>
+                            <li>Provide continuous education for producers.</li>
+                            <li>Encourage the construction of cold storage facilities and the establishment of
+                                cooperatives.</li>
+                            <li>Introduce <strong>GLOBAL G.A.P.</strong> standards on all export-oriented farms.</li>
+                            <li>Enhance marketing efforts through participation in international fairs.</li>
+                        </ul>
+                        <p>
+                            The plum definitely represents one of the agricultural products where our producers and
+                            exporters are competitive on the EU market. While relevant ministries must support producers
+                            through incentives, producers and exporters must also organize themselves much better.
+                            Breeders and exporters must maintain constant pressure on the public sector to provide the
+                            best possible business conditions for this branch of agriculture to flourish.
+                        </p>
+                    </div>
+
+                    <div class="post-footer">
+                        <a href="news.html" class="button__link"><i class="ri-arrow-left-line"></i> Back to News</a>
+                        <div class="post-share">
+                            <span>Share:</span>
+                            <a href="#" class="post-share-link"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" class="post-share-link"><i class="ri-linkedin-fill"></i></a>
+                            <a href="#" class="post-share-link"><i class="ri-twitter-x-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="news-sidebar">
+                    <div class="sidebar__widget">
+                        <h3 class="sidebar__widget-title">Stay Updated</h3>
+                        <p
+                            style="font-size:var(--smaller-font-size);color:var(--text-color-light);line-height:1.6;margin-bottom:1rem;">
+                            Get the latest project updates delivered to your inbox.
+                        </p>
+                        <div class="sidebar__newsletter-form">
+                            <input type="email" placeholder="Your email address" class="newsletter__input"
+                                style="width:100%;margin-bottom:0.5rem;padding:0.75rem;border:1px solid var(--border-color);border-radius:0.5rem;">
+                            <button class="button button--small" style="width:100%;">Subscribe</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div>
+                <div class="footer__logo">
+                    <a href="index.html" class="nav__logo">
+                        <span class="logo__span-mark">RC</span>
+                        <span class="logo__span-argo"><span style="color: var(--second-color);">ARGO</span><span
+                                class="logo__span-net">NET</span></span>
+                    </a>
+                </div>
+                <p class="footer__desc">
+                    Bridging European standards.<br>
+                    Driving sustainable growth and<br>
+                    innovation for local communities.
+                </p>
+            </div>
+
+            <div class="footer__links-grid">
+                <div class="footer__col">
+                    <h3>Company</h3>
+                    <ul class="footer__list">
+                        <li><a href="about.html" class="footer__link">About Us</a></li>
+                        <li><a href="index.html#governance" class="footer__link">Structure</a></li>
+                        <li><a href="news.html" class="footer__link">News</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3>Social Media</h3>
+                    <div class="footer__socials">
+                        <a href="https://www.facebook.com/rcargonetbl/" target="_blank" class="footer__social-link">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rcargonet/" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <span class="footer__copy container">© 2026 RC ARGONET. All rights reserved.</span>
+    </footer>
+
+    <!--=============== SCRIPT ===============-->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

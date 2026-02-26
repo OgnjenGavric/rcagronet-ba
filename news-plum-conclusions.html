@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <title>Post-Meeting Conclusions - RC ARGONET</title>
+
+    <style>
+        .post-detail {
+            padding-block: 10rem 5rem;
+            background-color: var(--body-color);
+        }
+
+        .post-detail__container {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 4rem;
+        }
+
+        .post-content {
+            background: var(--white-color);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-small);
+        }
+
+        .post-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .post-category {
+            display: inline-block;
+            background: var(--first-color-light);
+            color: var(--first-color);
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            font-size: var(--smaller-font-size);
+            font-weight: var(--font-bold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .post-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-family: var(--logo-font);
+            color: var(--second-color);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: var(--text-color-light);
+            font-size: var(--small-font-size);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .post-image {
+            width: 100%;
+            border-radius: 1rem;
+            margin-bottom: 2.5rem;
+            overflow: hidden;
+            background: var(--cream-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            font-size: 5rem;
+            color: var(--first-color);
+        }
+
+        .post-body {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .post-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body h3 {
+            margin: 2rem 0 1rem;
+            color: var(--second-color);
+        }
+
+        .post-body ul {
+            list-style: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-footer {
+            margin-top: 4rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-share {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .post-share-link {
+            width: 40px;
+            height: 40px;
+            background: var(--body-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--second-color);
+            transition: 0.3s;
+        }
+
+        .post-share-link:hover {
+            background: var(--second-color);
+            color: var(--white-color);
+        }
+
+        @media screen and (max-width: 1024px) {
+            .post-detail__container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar__widget {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header scrolled" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/rc-agronet-logo-470x390.png" alt="RC ARGONET logo" class="logo__img">
+                <span class="logo__span-argo"><span>RC&nbsp;ARGO</span><span class="logo__span-net">NET</span></span>
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Home</a></li>
+                    <li><a href="news.html" class="nav__link active-link">News</a></li>
+                    <li><a href="index.html#contact" class="nav__link button">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="post-detail">
+            <div class="post-detail__container container">
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-category">Policy</span>
+                        <h1 class="post-title">Conclusions from the Coordination Meeting of Plum and Other Fruit
+                            Producers and Exporters in BiH</h1>
+                        <div class="post-meta">
+                            <span><i class="ri-calendar-line"></i> Aug 4, 2016</span>
+                            <span><i class="ri-user-line"></i> By RC ARGONET</span>
+                        </div>
+                    </div>
+
+                    <div class="post-image">
+                        <i class="ri-file-list-3-line"></i>
+                    </div>
+
+                    <div class="post-body">
+                        <p>
+                            Following the coordination meeting held in Gradačac, representatives of relevant ministries,
+                            producers, and exporters have reached a consensus on the urgent actions needed to protect
+                            the Bosnian agricultural sector from <strong>EU protective pricing measures</strong>.
+                        </p>
+                        <p>
+                            The meeting resulted in a set of key conclusions aimed at stabilizing the fruit export
+                            market and minimizing losses for local producers during peak harvest seasons.
+                        </p>
+
+                        <h3>Key Conclusions and Actions</h3>
+                        <ul>
+                            <li><strong>State-Level Advocacy:</strong> A formal request will be submitted to the Council
+                                of Ministers of BiH and the Ministry of Foreign Trade to urgently initiate negotiations
+                                with the European Commission regarding the removal of seasonal protective prices.</li>
+                            <li><strong>Market Transparency:</strong> Establishing a better monitoring system for export
+                                prices to avoid triggering EU's special taxes.</li>
+                            <li><strong>Loss Mitigation:</strong> Exploring state and entity-level support mechanisms
+                                for exporters who have suffered financial losses due to existing trade barriers.</li>
+                            <li><strong>Standardization:</strong> Accelerating the adoption of international
+                                certificates like GLOBAL G.A.P. to enhance the competitive advantage of BiH products.
+                            </li>
+                        </ul>
+
+                        <p>
+                            RC ARGONET, as a key partner in this process, remains dedicated to providing the necessary
+                            technical and advocacy support to ensure the long-term sustainability of the agricultural
+                            export sector in Bosnia and Herzegovina.
+                        </p>
+                    </div>
+
+                    <div class="post-footer">
+                        <a href="news.html" class="button__link"><i class="ri-arrow-left-line"></i> Back to News</a>
+                    </div>
+                </div>
+
+                <aside class="news-sidebar">
+                    <div class="sidebar__widget">
+                        <h3 class="sidebar__widget-title">Advocacy</h3>
+                        <p style="font-size:var(--smaller-font-size);color:var(--text-color-light);line-height:1.6;">
+                            Our advocacy efforts aim to create a fairer trade environment for local producers.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span class="footer__copy container">© 2026 RC ARGONET. All rights reserved.</span>
+    </footer>
+</body>
+
+</html>
