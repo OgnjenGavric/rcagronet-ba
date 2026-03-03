@@ -445,5 +445,30 @@ function closeKbModal(e) {
 }
 
 document.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') closeKbModal();
+  if (e.key === 'Escape') {
+    closeKbModal();
+    closePdfModal();
+  }
 });
+
+/*=============== PDF PREVIEW MODAL ===============*/
+function openPdfModal(url) {
+  const modal = document.getElementById('pdfModal');
+  const iframe = document.getElementById('pdfIframe');
+  if (modal && iframe) {
+    iframe.src = url;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closePdfModal(e) {
+  const modal = document.getElementById('pdfModal');
+  const iframe = document.getElementById('pdfIframe');
+
+  if (!e || e.target === modal || e.target.closest('.pdf-modal__close-btn')) {
+    if (modal) modal.classList.remove('active');
+    if (iframe) iframe.src = ''; // Clear src to stop loading
+    document.body.style.overflow = '';
+  }
+}

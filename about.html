@@ -264,11 +264,18 @@
               level — from governance and recruitment to project design and delivery.
             </p>
 
-            <a href="assets/pdf/11_RCA-GEP-011_Gender_Equality_Plan.pdf" class="button button--ghost" download
-              target="_blank">
-              <i class="ri-download-line"></i>
-              Download GEP
-            </a>
+            <div class="gep__buttons">
+              <a href="javascript:void(0)" class="button"
+                onclick="openPdfModal('assets/pdf/11_RCA-GEP-011_Gender_Equality_Plan.pdf')">
+                <i class="ri-eye-line"></i>
+                Preview GEP
+              </a>
+              <a href="assets/pdf/11_RCA-GEP-011_Gender_Equality_Plan.pdf" class="button button--ghost" download
+                target="_blank">
+                <i class="ri-download-line"></i>
+                Download GEP
+              </a>
+            </div>
           </div>
 
           <div class="gep__pillars">
@@ -816,6 +823,20 @@
       </a>
     </div>
 
+    <!--==================== PDF PREVIEW MODAL ====================-->
+    <div class="pdf-modal-overlay" id="pdfModal" onclick="closePdfModal(event)">
+      <div class="pdf-modal">
+        <div class="pdf-modal__header">
+          <h3 class="pdf-modal__title">Document Preview</h3>
+          <button class="pdf-modal__close-btn" onclick="closePdfModal()">
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+        <div class="pdf-modal__body">
+          <iframe src="" frameborder="0" class="pdf-modal__iframe" id="pdfIframe"></iframe>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!--==================== FOOTER ====================-->

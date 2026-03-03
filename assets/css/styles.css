@@ -1641,6 +1641,103 @@ address {
   font-size: 1.2rem;
 }
 
+/*==================== PDF PREVIEW MODAL ====================*/
+.pdf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.pdf-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pdf-modal {
+  background: var(--body-color);
+  width: 100%;
+  max-width: 1000px;
+  height: 90vh;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  transform: translateY(30px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pdf-modal-overlay.active .pdf-modal {
+  transform: translateY(0);
+}
+
+.pdf-modal__header {
+  padding: 1rem 1.5rem;
+  background: #0f1f2e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pdf-modal__title {
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.pdf-modal__close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.pdf-modal__close-btn:hover {
+  background: rgba(197, 48, 48, 0.8);
+}
+
+.pdf-modal__body {
+  flex: 1;
+  background: #525659;
+  /* Standard PDF viewer background */
+}
+
+.pdf-modal__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.gep__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pdf-modal {
+    height: 95vh;
+  }
+}
+
 /*=============== LATEST NEWS CARD ===============*/
 .latest-news__card {
   margin: 1rem 0;
@@ -3310,7 +3407,7 @@ address {
   min-width: 0;
 }
 
-.news-layout > * {
+.news-layout>* {
   min-width: 0;
 }
 
