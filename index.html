@@ -214,7 +214,8 @@
         </p>
 
         <div class="resources__grid reveal visible">
-          <a href="javascript:void(0)" class="resource__card resource__card--kb reveal" onclick="openKbModal()">
+          <a href="javascript:void(0)" class="resource__card resource__card--kb reveal"
+            onclick="openKbModal('training')">
             <div class="resource__body">
               <div class="resource__icon"><i class="ri-graduation-cap-line"></i></div>
               <h3 class="resource__title">Training Repository</h3>
@@ -226,7 +227,8 @@
             </div>
           </a>
 
-          <a href="javascript:void(0)" class="resource__card resource__card--kb reveal" onclick="openKbModal()">
+          <a href="javascript:void(0)" class="resource__card resource__card--kb reveal"
+            onclick="openKbModal('funding')">
             <div class="resource__body">
               <div class="resource__icon"><i class="ri-stack-line"></i></div>
               <h3 class="resource__title">Funding Opportunities</h3>
@@ -237,7 +239,8 @@
             </div>
           </a>
 
-          <a href="javascript:void(0)" class="resource__card resource__card--kb reveal" onclick="openKbModal()">
+          <a href="javascript:void(0)" class="resource__card resource__card--kb reveal"
+            onclick="openKbModal('publications')">
             <div class="resource__body">
               <div class="resource__icon"><i class="ri-file-list-3-line"></i></div>
               <h3 class="resource__title">Publications</h3>
@@ -249,7 +252,7 @@
             </div>
           </a>
 
-          <a href="javascript:void(0)" class="resource__card resource__card--kb reveal" onclick="openKbModal()">
+          <a href="javascript:void(0)" class="resource__card resource__card--kb reveal" onclick="openKbModal('ai')">
             <div class="resource__body">
               <div class="resource__icon"><i class="ri-robot-line"></i></div>
               <h3 class="resource__title">AI & Digital Innovation</h3>
@@ -270,14 +273,16 @@
       <!--==================== KB MODAL ====================-->
       <div class="kb-modal-overlay" id="kbModal" onclick="closeKbModal(event)">
         <div class="kb-modal">
-          <span class="kb-modal__icon">🚧</span>
-          <div class="kb-modal__badge">Coming Soon</div>
-          <h3 class="kb-modal__title">Section Under Construction</h3>
-          <p class="kb-modal__text">
-            We're currently building this part of the Knowledge Base. Our team is working hard to bring you a curated
-            library of trainings, funding opportunities, and digital innovation resources.<br><br>
-            Please check back soon — new content is being added regularly.
-          </p>
+          <div id="modalContent">
+            <span class="kb-modal__icon">🚧</span>
+            <div class="kb-modal__badge">Coming Soon</div>
+            <h3 class="kb-modal__title">Section Under Construction</h3>
+            <p class="kb-modal__text">
+              We're currently building this part of the Knowledge Base. Our team is working hard to bring you a curated
+              library of trainings, funding opportunities, and digital innovation resources.<br><br>
+              Please check back soon — new content is being added regularly.
+            </p>
+          </div>
           <button class="kb-modal__close" onclick="closeKbModal()">
             <i class="ri-close-line"></i> Got it, close
           </button>

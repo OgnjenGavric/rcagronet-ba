@@ -375,14 +375,71 @@ newsletterForm?.addEventListener('submit', (e) => {
 })();
 
 /*=============== KNOWLEDGE BASE MODAL ===============*/
-function openKbModal() {
-  document.getElementById('kbModal').classList.add('active');
+const modalContentData = {
+  'ai': {
+    icon: 'ri-robot-line',
+    badge: 'Digital Innovation',
+    title: 'AI & Digital Innovation',
+    text: 'Explore our latest AI projects, implementation guides, and digital transformation tools designed to drive sustainable growth.',
+    buttons: [
+      { text: 'Test your ESG performance', link: 'https://esg-baseline.netlify.app/', icon: 'ri-line-chart-line', primary: true }
+    ]
+  },
+  'training': {
+    icon: '🚧',
+    badge: 'Coming Soon',
+    title: 'Training Repository',
+    text: 'Our team is working hard to bring you a curated library of trainings and educational resources. Please check back soon.',
+    buttons: []
+  },
+  'funding': {
+    icon: '🚧',
+    badge: 'Coming Soon',
+    title: 'Funding Opportunities',
+    text: 'A catalog of open calls and grants is currently in development. We are aggregating the latest financial instruments for your projects.',
+    buttons: []
+  },
+  'publications': {
+    icon: '🚧',
+    badge: 'Coming Soon',
+    title: 'Publications',
+    text: 'We are preparing a repository of reports, policy briefs, and guidance documents. New content is being added regularly.',
+    buttons: []
+  }
+};
+
+function openKbModal(section) {
+  const modal = document.getElementById('kbModal');
+  const content = document.getElementById('modalContent');
+  const data = modalContentData[section] || modalContentData['training'];
+
+  let buttonsHtml = '';
+  if (data.buttons && data.buttons.length > 0) {
+    buttonsHtml = `<div class="kb-modal__actions">
+      ${data.buttons.map(btn => `
+        <a href="${btn.link}" class="kb-tool-btn ${btn.primary ? 'kb-tool-btn--primary' : ''}" target="_blank">
+          ${btn.icon ? `<i class="${btn.icon}"></i>` : ''} ${btn.text}
+        </a>
+      `).join('')}
+    </div>`;
+  }
+
+  content.innerHTML = `
+    <span class="kb-modal__icon">${data.icon.startsWith('ri-') ? `<i class="${data.icon}"></i>` : data.icon}</span>
+    <div class="kb-modal__badge">${data.badge}</div>
+    <h3 class="kb-modal__title">${data.title}</h3>
+    <p class="kb-modal__text">${data.text}</p>
+    ${buttonsHtml}
+  `;
+
+  modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
 function closeKbModal(e) {
-  if (!e || e.target === document.getElementById('kbModal')) {
-    document.getElementById('kbModal').classList.remove('active');
+  const modal = document.getElementById('kbModal');
+  if (!e || e.target === modal || e.target.closest('.kb-modal__close')) {
+    modal.classList.remove('active');
     document.body.style.overflow = '';
   }
 }
