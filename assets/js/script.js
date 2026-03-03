@@ -400,11 +400,19 @@ const modalContentData = {
     buttons: []
   },
   'publications': {
-    icon: '🚧',
-    badge: 'Coming Soon',
+    icon: 'ri-article-line',
+    badge: 'Library',
     title: 'Publications',
-    text: 'We are preparing a repository of reports, policy briefs, and guidance documents. New content is being added regularly.',
-    buttons: []
+    text: 'Access our repository of technical reports, research papers, and educational presentations on sustainable agriculture and digital innovation.',
+    buttons: [
+      { text: 'Sljiva - Zaboravljeni potencijal', link: 'assets/publications/Sljiva-zaboravljeni-potencijal.pdf', icon: 'ri-file-pdf-line', preview: true, primary: true, dual: true },
+      { text: 'Crveni pauk', link: 'assets/publications/Crveni-pauk.pdf', icon: 'ri-file-pdf-line', preview: true, primary: true, dual: true },
+      { text: 'Tehnologija uzgoja jabuke', link: 'assets/publications/Tehnologija-uzgoja-jabuke.pdf', icon: 'ri-file-pdf-line', preview: true, primary: true, dual: true },
+      { text: 'Tehnologija uzgoja sljive', link: 'assets/publications/Tehnologija-uzgoja-sljive.pdf', icon: 'ri-file-pdf-line', preview: true, primary: true, dual: true },
+      { text: 'Kruškina buva', link: 'assets/publications/kruškina-buva.pdf', icon: 'ri-file-pdf-line', preview: true, primary: true, dual: true },
+      { text: 'Hemijsko prorjeđivanjе i gibberelini', link: 'assets/publications/hemijsko-prorjeđivanjе-i-gibberelini.pdf', icon: 'ri-file-pdf-line', preview: true, primary: true, dual: true },
+      { text: 'Mašine za održavanje zemljišta', link: 'assets/publications/Masine-za-odrzavanje-zemljista-u-vocnjacima.pdf', icon: 'ri-file-pdf-line', preview: true, primary: true, dual: true }
+    ]
   }
 };
 
@@ -416,11 +424,32 @@ function openKbModal(section) {
   let buttonsHtml = '';
   if (data.buttons && data.buttons.length > 0) {
     buttonsHtml = `<div class="kb-modal__actions">
-      ${data.buttons.map(btn => `
-        <a href="${btn.link}" class="kb-tool-btn ${btn.primary ? 'kb-tool-btn--primary' : ''}" target="_blank">
-          ${btn.icon ? `<i class="${btn.icon}"></i>` : ''} ${btn.text}
-        </a>
-      `).join('')}
+      ${data.buttons.map(btn => {
+      if (btn.dual) {
+        return `
+            <div class="kb-resource-item">
+              <span class="kb-resource-title">${btn.text}</span>
+              <div class="kb-resource-actions">
+                <a href="javascript:void(0)" 
+                   class="kb-tool-btn kb-tool-btn--primary" 
+                   onclick="${btn.preview ? `openPdfModal('${btn.link}')` : `window.open('${btn.link}', '_blank')`}">
+                  <i class="ri-eye-line"></i> Preview
+                </a>
+                <a href="${btn.link}" class="kb-tool-btn" download target="_blank">
+                  <i class="ri-download-line"></i> Download
+                </a>
+              </div>
+            </div>
+          `;
+      }
+      return `
+          <a href="${btn.preview ? 'javascript:void(0)' : btn.link}" 
+             class="kb-tool-btn ${btn.primary ? 'kb-tool-btn--primary' : ''}" 
+             ${btn.preview ? `onclick="openPdfModal('${btn.link}')"` : 'target="_blank"'}>
+            ${btn.icon ? `<i class="${btn.icon}"></i>` : ''} ${btn.text}
+          </a>
+        `;
+    }).join('')}
     </div>`;
   }
 

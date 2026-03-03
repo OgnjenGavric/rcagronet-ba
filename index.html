@@ -724,6 +724,21 @@
     <i class="ri-arrow-up-line"></i>
   </a>
 
+  <!--==================== PDF PREVIEW MODAL ====================-->
+  <div class="pdf-modal-overlay" id="pdfModal" onclick="closePdfModal(event)">
+    <div class="pdf-modal">
+      <div class="pdf-modal__header">
+        <h3 class="pdf-modal__title">Document Preview</h3>
+        <button class="pdf-modal__close-btn" onclick="closePdfModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+      <div class="pdf-modal__body">
+        <iframe id="pdfIframe" src="" class="pdf-modal__iframe"></iframe>
+      </div>
+    </div>
+  </div>
+
   <!--=============== SCRIPT ===============-->
   <script src="assets/js/script.js"></script>
 

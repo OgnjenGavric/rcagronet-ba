@@ -1538,10 +1538,26 @@ address {
   padding: 2.5rem 2rem 2rem;
   max-width: 420px;
   width: 90%;
+  max-height: 90vh;
+  /* Fix: Allow modal to be scrollable */
+  overflow-y: auto;
+  /* Fix: Allow scroll if content is long */
   text-align: center;
   transform: translateY(20px) scale(0.97);
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kb-modal::-webkit-scrollbar {
+  width: 5px;
+}
+
+.kb-modal::-webkit-scrollbar-thumb {
+  background: rgba(200, 164, 78, 0.3);
+  border-radius: 10px;
 }
 
 .kb-modal-overlay.active .kb-modal {
@@ -1584,23 +1600,25 @@ address {
 
 .kb-modal__close {
   display: inline-flex;
-  margin-top: auto;
+  margin-top: 1rem;
+  /* Changed from auto to 1rem for better spacing in list */
   width: fit-content;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(200, 164, 78, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  /* Darker/Neutral for close button */
   color: var(--white-color);
-  border: 1px solid rgba(200, 164, 78, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 8px;
   padding: 0.65rem 1.6rem;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.22s, transform 0.18s;
+  transition: all 0.22s;
 }
 
 .kb-modal__close:hover {
-  background: rgba(200, 164, 78, 0.32);
+  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }
 
@@ -1609,7 +1627,9 @@ address {
   flex-direction: column;
   gap: 0.75rem;
   margin-top: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  /* Ensure full width for buttons */
 }
 
 .kb-tool-btn {
@@ -1623,18 +1643,66 @@ address {
   font-weight: 600;
   transition: all 0.25s ease;
   width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--white-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kb-tool-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 .kb-tool-btn--primary {
   background: var(--gold-color);
   color: #0f1f2e;
   box-shadow: 0 4px 15px rgba(200, 164, 78, 0.25);
+  border: none;
 }
 
 .kb-tool-btn--primary:hover {
   background: var(--gold-color-light);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(200, 164, 78, 0.35);
+}
+
+/*==================== RESOURCE DUAL ACTION ====================*/
+.kb-resource-item {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kb-resource-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}
+
+.kb-resource-title {
+  color: var(--white-color);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.kb-resource-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media screen and (max-width: 350px) {
+  .kb-resource-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kb-resource-actions .kb-tool-btn {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
 }
 
 .kb-tool-btn i {
@@ -1866,6 +1934,7 @@ address {
 
   /* Clamp to 3 lines */
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
