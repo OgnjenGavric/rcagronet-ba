@@ -1,0 +1,30 @@
+# Walkthrough - LMS AGRONET Hub Button
+
+I have added the requested button to the **AI & Digital Innovation** modal in the Knowledge Base section.
+
+## Changes Made
+
+### JavaScript Update
+Updated the `modalContentData` in [script.js](file:///c:/dev/1-Olja-posao/mile-agronet/rc-agronet/assets/js/script.js) to include the new button.
+
+```javascript
+/* assets/js/script.js */
+'ai': {
+    icon: 'ri-robot-line',
+    badge: 'Digital Innovation',
+    title: 'AI & Digital Innovation',
+    text: 'Explore our latest AI projects, implementation guides, and digital transformation tools designed to drive sustainable growth.',
+    buttons: [
+      { text: 'LMS AGRONET Hub - Innovation Lab', link: 'https://lms-platform-ai.vercel.app/', icon: 'ri-rocket-line', primary: true },
+      { text: 'Test your ESG performance', link: 'https://esg-baseline.netlify.app/', icon: 'ri-line-chart-line', primary: true }
+    ]
+  },
+```
+
+## Verification
+
+The new button will now appear when clicking "Start exploring" on the "AI & Digital Innovation" card in the Knowledge Base section.
+
+- **Button Text:** LMS AGRONET Hub - Innovation Lab
+- **Link:** [https://lms-platform-ai.vercel.app/](https://lms-platform-ai.vercel.app/)
+- **Icon:** `ri-rocket-line`

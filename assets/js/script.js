@@ -382,7 +382,7 @@ const modalContentData = {
     title: 'AI & Digital Innovation',
     text: 'Explore our latest AI projects, implementation guides, and digital transformation tools designed to drive sustainable growth.',
     buttons: [
-      { text: 'LMS AGRONET Hub - Innovation Lab', link: 'https://lms-platform-ai.vercel.app/', icon: 'ri-rocket-line', primary: true },
+      /* { text: 'LMS AGRONET Hub - Innovation Lab', link: 'https://lms-platform-ai.vercel.app/', icon: 'ri-rocket-line', primary: true }, */
       { text: 'Test your ESG performance', link: 'https://esg-baseline.netlify.app/', icon: 'ri-line-chart-line', primary: true }
     ]
   },
