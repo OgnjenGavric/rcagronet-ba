@@ -387,11 +387,76 @@ const modalContentData = {
     ]
   },
   'training': {
-    icon: '🚧',
-    badge: 'Coming Soon',
-    title: 'Training Repository',
-    text: 'Our team is working hard to bring you a curated library of trainings and educational resources. Please check back soon.',
-    buttons: []
+    icon: 'ri-graduation-cap-line',
+    badge: 'Education & Training',
+    title: 'Training Academy Repository',
+    text: 'A curated library of structured training programs, academies, and capacity-building packages designed to strengthen organizations, communities, and agricultural enterprises.',
+    packages: [
+      {
+        badge: 'Package A',
+        title: 'EU Project Readiness Academy',
+        target: 'NGOs, municipalities, universities, associations.',
+        includes: [
+          'Grant call analysis',
+          'Proposal writing',
+          'Intervention logic',
+          'Budgeting',
+          'Donor compliance',
+          'AI-assisted grant writing'
+        ]
+      },
+      {
+        badge: 'Package B',
+        title: 'Agri Standards & Export Readiness Academy',
+        target: 'Farmers, cooperatives, exporters, advisory services.',
+        includes: [
+          'GlobalG.A.P.',
+          'Organic readiness',
+          'HACCP basics',
+          'Traceability',
+          'EUDR readiness',
+          'Buyer communication'
+        ]
+      },
+      {
+        badge: 'Package C',
+        title: 'Green Entrepreneurship & Rural Innovation Academy',
+        target: 'Youth, women entrepreneurs, rural SMEs, startups.',
+        includes: [
+          'Green business model',
+          'Social entrepreneurship',
+          'Market access',
+          'Digital marketing',
+          'Circular economy'
+        ]
+      },
+      {
+        badge: 'Package D',
+        title: 'Digital NGO/SME Transformation Academy',
+        target: 'Organizations that need better systems.',
+        includes: [
+          'Document management',
+          'Dashboards',
+          'AI tools',
+          'Digital traceability',
+          'Monitoring systems',
+          'Data protection basics'
+        ]
+      },
+      {
+        badge: 'Package E',
+        title: 'CSO & Public Policy Capacity Academy',
+        target: 'Civil society organizations and local institutions.',
+        includes: [
+          'EU integration basics',
+          'Policy briefs',
+          'Advocacy',
+          'CSO governance',
+          'Gender mainstreaming',
+          'Transparency'
+        ]
+      }
+    ]
   },
   'funding': {
     icon: '🚧',
@@ -422,45 +487,80 @@ function openKbModal(section) {
   const content = document.getElementById('modalContent');
   const data = modalContentData[section] || modalContentData['training'];
 
-  let buttonsHtml = '';
-  if (data.buttons && data.buttons.length > 0) {
-    buttonsHtml = `<div class="kb-modal__actions">
-      ${data.buttons.map(btn => {
-      if (btn.dual) {
-        return `
-            <div class="kb-resource-item">
-              <span class="kb-resource-title">${btn.text}</span>
-              <div class="kb-resource-actions">
-                <a href="javascript:void(0)" 
-                   class="kb-tool-btn kb-tool-btn--primary" 
-                   onclick="${btn.preview ? `openPdfModal('${btn.link}')` : `window.open('${btn.link}', '_blank')`}">
-                  <i class="ri-eye-line"></i> Preview
-                </a>
-                <a href="${btn.link}" class="kb-tool-btn" download target="_blank">
-                  <i class="ri-download-line"></i> Download
-                </a>
-              </div>
-            </div>
-          `;
-      }
-      return `
-          <a href="${btn.preview ? 'javascript:void(0)' : btn.link}" 
-             class="kb-tool-btn ${btn.primary ? 'kb-tool-btn--primary' : ''}" 
-             ${btn.preview ? `onclick="openPdfModal('${btn.link}')"` : 'target="_blank"'}>
-            ${btn.icon ? `<i class="${btn.icon}"></i>` : ''} ${btn.text}
-          </a>
-        `;
-    }).join('')}
-    </div>`;
-  }
+  if (section === 'training') {
+    modal.classList.add('kb-modal-overlay--wide');
 
-  content.innerHTML = `
-    <span class="kb-modal__icon">${data.icon.startsWith('ri-') ? `<i class="${data.icon}"></i>` : data.icon}</span>
-    <div class="kb-modal__badge">${data.badge}</div>
-    <h3 class="kb-modal__title">${data.title}</h3>
-    <p class="kb-modal__text">${data.text}</p>
-    ${buttonsHtml}
-  `;
+    const packagesHtml = data.packages.map(pkg => `
+      <div class="kb-package-card">
+        <div class="kb-package-header">
+          <span class="kb-package-badge">${pkg.badge}</span>
+          <h4 class="kb-package-title">${pkg.title}</h4>
+        </div>
+        <p class="kb-package-target"><strong>Best for:</strong> ${pkg.target}</p>
+        <div class="kb-package-includes">
+          <h5>Includes:</h5>
+          <ul>
+            ${pkg.includes.map(item => `<li><i class="ri-checkbox-circle-line"></i> ${item}</li>`).join('')}
+          </ul>
+        </div>
+        <a href="mailto:rcargonet@gmail.com?subject=Inquiry%20about%20${encodeURIComponent(pkg.title)}" class="kb-package-btn">
+          Contact Us <i class="ri-mail-send-line"></i>
+        </a>
+      </div>
+    `).join('');
+
+    content.innerHTML = `
+      <span class="kb-modal__icon"><i class="${data.icon}"></i></span>
+      <div class="kb-modal__badge">${data.badge}</div>
+      <h3 class="kb-modal__title">${data.title}</h3>
+      <p class="kb-modal__text">${data.text}</p>
+      <div class="kb-packages">
+        ${packagesHtml}
+      </div>
+    `;
+  } else {
+    modal.classList.remove('kb-modal-overlay--wide');
+
+    let buttonsHtml = '';
+    if (data.buttons && data.buttons.length > 0) {
+      buttonsHtml = `<div class="kb-modal__actions">
+        ${data.buttons.map(btn => {
+        if (btn.dual) {
+          return `
+              <div class="kb-resource-item">
+                <span class="kb-resource-title">${btn.text}</span>
+                <div class="kb-resource-actions">
+                  <a href="javascript:void(0)" 
+                     class="kb-tool-btn kb-tool-btn--primary" 
+                     onclick="${btn.preview ? `openPdfModal('${btn.link}')` : `window.open('${btn.link}', '_blank')`}">
+                    <i class="ri-eye-line"></i> Preview
+                  </a>
+                  <a href="${btn.link}" class="kb-tool-btn" download target="_blank">
+                    <i class="ri-download-line"></i> Download
+                  </a>
+                </div>
+              </div>
+            `;
+        }
+        return `
+            <a href="${btn.preview ? 'javascript:void(0)' : btn.link}" 
+               class="kb-tool-btn ${btn.primary ? 'kb-tool-btn--primary' : ''}" 
+               ${btn.preview ? `onclick="openPdfModal('${btn.link}')"` : 'target="_blank"'}>
+              ${btn.icon ? `<i class="${btn.icon}"></i>` : ''} ${btn.text}
+            </a>
+          `;
+      }).join('')}
+      </div>`;
+    }
+
+    content.innerHTML = `
+      <span class="kb-modal__icon">${data.icon.startsWith('ri-') ? `<i class="${data.icon}"></i>` : data.icon}</span>
+      <div class="kb-modal__badge">${data.badge}</div>
+      <h3 class="kb-modal__title">${data.title}</h3>
+      <p class="kb-modal__text">${data.text}</p>
+      ${buttonsHtml}
+    `;
+  }
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
@@ -470,6 +570,7 @@ function closeKbModal(e) {
   const modal = document.getElementById('kbModal');
   if (!e || e.target === modal || e.target.closest('.kb-modal__close')) {
     modal.classList.remove('active');
+    modal.classList.remove('kb-modal-overlay--wide');
     document.body.style.overflow = '';
   }
 }
